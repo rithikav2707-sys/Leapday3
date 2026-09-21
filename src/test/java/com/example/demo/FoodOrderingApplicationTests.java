@@ -26,4 +26,9 @@ class FoodOrderingApplicationTests {
         assertThat(saved.getId()).isNotNull();
         assertThat(saved.getName()).isEqualTo("Burger");
     }
+
+    @Test
+    void shouldHaveDefaultMenuItems() {
+        assertThat(foodItemRepository.findAll()).isNotEmpty();
+    }
 }
